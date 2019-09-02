@@ -39,6 +39,7 @@ public class Login extends JFrame{
         bodyPanel.add(nameField);
         bodyPanel.add(passField);
         bodyPanel.add(ipField);
+        ipField.setText("127.0.0.1");
 
         JPanel titlePanel = new JPanel();
 
@@ -63,7 +64,6 @@ public class Login extends JFrame{
     private void addListener() {
         rigsterButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Login.this.setVisible(false);
                 Register register = new Register(Login.this);
             }
         });

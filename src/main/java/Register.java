@@ -16,7 +16,8 @@ import java.util.regex.Pattern;
 public class Register extends JFrame {
 
     private JButton button = new JButton("确定");
-    private boolean isTestEnv = true;
+    private JButton loginbtn = new JButton("登陆");
+    private boolean isTestEnv = false;
     private JFrame login;
 
     public Register(final JFrame login){
@@ -51,6 +52,7 @@ public class Register extends JFrame {
 
         JPanel btnPanel = new JPanel();
         btnPanel.add(button);
+        btnPanel.add(loginbtn);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -58,6 +60,12 @@ public class Register extends JFrame {
         this.add(bodyPanel,"Center");
         this.add(btnPanel,"South");
 
+        loginbtn.addActionListener((e)->{
+
+            this.setVisible(false);
+            new Login();
+
+        });
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 

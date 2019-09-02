@@ -38,10 +38,11 @@ public class Admin extends JFrame {
         try {
             ss = new ServerSocket(8989);
         } catch (IOException e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(Admin.this.getRootPane(), "创建服务器失败");
             System.exit(0);
         }
-        this.setSize(500, 500);
+        this.setSize(800, 500);
         this.setTitle("聊天室          用户：管理员");
         //在线人
         //接受消息框
